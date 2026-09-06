@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+// Esta clase representa un producto que se va a guardar en la base de datos
 @Entity
 public class Producto {
 
@@ -17,15 +18,19 @@ public class Producto {
     private double precio;
     private int stock;
 
+    // Constructor vacio (lo necesita Spring/JPA para funcionar)
     public Producto() {
     }
 
+    // Constructor con datos, para crear productos mas facil
     public Producto(String nombre, String categoria, double precio, int stock) {
         this.nombre = nombre;
         this.categoria = categoria;
         this.precio = precio;
         this.stock = stock;
     }
+
+    // Getters y setters
 
     public Long getId() {
         return id;
@@ -63,14 +68,10 @@ public class Producto {
         this.stock = stock;
     }
 
+    // Este metodo es para que cuando imprimamos el producto se vea prolijo
     @Override
     public String toString() {
-        return "Producto{" +
-                "id=" + id +
-                ", nombre='" + nombre + '\'' +
-                ", categoria='" + categoria + '\'' +
-                ", precio=" + precio +
-                ", stock=" + stock +
-                '}';
+        return "Producto [id=" + id + ", nombre=" + nombre + ", categoria=" + categoria
+                + ", precio=" + precio + ", stock=" + stock + "]";
     }
 }
