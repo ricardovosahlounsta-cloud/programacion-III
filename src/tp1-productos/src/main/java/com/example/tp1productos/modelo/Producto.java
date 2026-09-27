@@ -68,7 +68,7 @@ public class Producto {
         this.stock = stock;
     }
 
-    // Este metodo es para que cuando imprimamos el producto se vea prolijo
+    // Este metodo es para que cuando imprimama el producto se vea bien
     @Override
     public String toString() {
         return "Producto [id=" + id + ", nombre=" + nombre + ", categoria=" + categoria
